@@ -204,10 +204,10 @@
                     @else
                         <p>Please add a YABS to
                             see Geekbench, disk and network speeds:</p>
-                        <code>curl -sL yabs.sh | bash -s -- -s "{{route('api.store-yabs', [$server_data->id, \Illuminate\Support\Facades\Auth::user()->api_token])}}"</code>
+                        <code>curl -sL yabs.sh | bash -s -- -5 -6 -s "{{route('api.store-yabs', [$server_data->id, \Illuminate\Support\Facades\Auth::user()->api_token])}}"</code>
                     @endif
                 </div>
-                <p id="yabs_code" class="d-none pt-3"><code>curl -sL yabs.sh | bash -s -- -s "{{route('api.store-yabs', [$server_data->id, \Illuminate\Support\Facades\Auth::user()->api_token])}}"</code></p>
+                <p id="yabs_code" class="d-none pt-3"><code>curl -sL yabs.sh | bash -s -- -5 -6 -s "{{route('api.store-yabs', [$server_data->id, \Illuminate\Support\Facades\Auth::user()->api_token])}}"</code></p>
                 @if(isset($server_data->note))
                     <p class="font-bold text-muted mt-3 mb-1 pb-0">Note:</p>
                     <p class="pt-0">{{$server_data->note->note}}</p>
