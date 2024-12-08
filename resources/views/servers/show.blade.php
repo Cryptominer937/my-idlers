@@ -66,14 +66,14 @@
                                 <td class="px-2 py-2 font-bold text-muted">CPU</td>
                                 <td>
                                     {{ $server_data->cpu }} @if($server_data->has_yabs)
-                                        <small>@</small> {{ $server_data->yabs[0]->cpu_freq }} Mhz
+                                        <small>@</small> {{ bcdiv($server_data->yabs[0]->cpu_freq, 1, 2); }} Mhz
                                     @endif</td>
                             </tr>
                             <tr>
                                 <td class="px-2 py-2 font-bold text-muted">RAM</td>
                                 <td>
                                     @if(isset($server_data->yabs[0]->ram))
-                                        {{ $server_data->yabs[0]->ram }} {{ $server_data->yabs[0]->ram_type }}
+                                        {{ bcdiv($server_data->yabs[0]->ram, 1, 2); }} {{ $server_data->yabs[0]->ram_type }}
                                     @else
                                         {{ $server_data->ram }} {{ $server_data->ram_type }}
                                     @endif
@@ -83,7 +83,7 @@
                                 <td class="px-2 py-2 font-bold text-muted">Disk</td>
                                 <td>
                                     @if(isset($server_data->yabs[0]->disk))
-                                        {{ $server_data->yabs[0]->disk }} {{ $server_data->yabs[0]->disk_type }}
+                                        {{ bcdiv($server_data->yabs[0]->disk, 1, 2); }} {{ $server_data->yabs[0]->disk_type }}
                                     @else
                                         {{ $server_data->disk }} {{ $server_data->disk_type }}
                                     @endif
@@ -172,24 +172,24 @@
                                 </tr>
                                 <tr>
                                     <td class="px-2 py-2 font-bold text-muted">Disk 4k</td>
-                                    <td>{{$server_data->yabs[0]->disk_speed->d_4k}}
+                                    <td>{{ bcdiv($server_data->yabs[0]->disk_speed->d_4k, 1, 2); }}
                                         <small>{{$server_data->yabs[0]->disk_speed->d_4k_type}}</small></td>
                                 </tr>
                                 <tr>
                                     <td class="px-2 py-2 font-bold text-muted">Disk 64k</td>
-                                    <td>{{$server_data->yabs[0]->disk_speed->d_64k}}
+                                    <td>{{ bcdiv($server_data->yabs[0]->disk_speed->d_64k, 1, 2); }}
                                         <small>{{$server_data->yabs[0]->disk_speed->d_64k_type}}</small>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="px-2 py-2 font-bold text-muted">Disk 512k</td>
-                                    <td>{{$server_data->yabs[0]->disk_speed->d_512k}}
+                                    <td>{{ bcdiv($server_data->yabs[0]->disk_speed->d_512k, 1, 2); }}
                                         <small>{{$server_data->yabs[0]->disk_speed->d_512k_type}}</small>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="px-2 py-2 font-bold text-muted">Disk 1m</td>
-                                    <td>{{$server_data->yabs[0]->disk_speed->d_1m}}
+                                    <td>{{ bcdiv($server_data->yabs[0]->disk_speed->d_1m, 1, 2); }}
                                         <small>{{$server_data->yabs[0]->disk_speed->d_1m_type}}</small></td>
                                 </tr>
                                 <tr>
