@@ -86,6 +86,16 @@
                                            class="text-decoration-none">{{ $yabs->gb5_multi }}</a></td>
                                 </tr>
                                 <tr>
+                                    <td class="px-4 py-2 font-bold">GB6 Single</td>
+                                    <td><a href="https://browser.geekbench.com/v6/cpu/{{$yabs->gb6_id}}"
+                                           class="text-decoration-none">{{ $yabs->gb6_single }}</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 font-bold">GB6 Multi</td>
+                                    <td><a href="https://browser.geekbench.com/v6/cpu/{{$yabs->gb6_id}}"
+                                           class="text-decoration-none">{{ $yabs->gb6_multi }}</a></td>
+                                </tr>
+                                <tr>
                                     <td class="px-4 py-2 font-bold">Test ran</td>
                                     <td>
                                         @if(!is_null($yabs->output_date))
