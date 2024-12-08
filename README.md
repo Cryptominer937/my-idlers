@@ -68,7 +68,7 @@ php artisan cache:clear
 
 ## Install
 
-* Run `git clone https://github.com/cp6/my-idlers.git` into your directory of choice
+* Run `git clone https://github.com/Cryptominer937/my-idlers.git` into your directory of choice
 * Run `composer install`
 * Run `cp .env.example .env`
 * Edit (If needed) MySQL details in .env
