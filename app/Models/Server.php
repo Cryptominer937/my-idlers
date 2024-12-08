@@ -102,7 +102,7 @@ class Server extends Model
             return "DEDI";
         } elseif ($type === 4) {
             return "LXC";
-        } elseif ($type === 4) {
+        } elseif ($type === 5) {
             return "XEN";
         } elseif ($type === 6) {
             return "VMware";
