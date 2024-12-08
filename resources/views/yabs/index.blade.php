@@ -37,9 +37,9 @@
                                 <td><a href="servers/{{$yab->server_id}}"
                                        class="text-decoration-none">{{ $yab->server->hostname }}</a></td>
                                 <td><span title="{{$yab->cpu_model}}">{{ $yab->cpu_cores }}</span></td>
-                                <td><span title="{{$yab->cpu_model}}">{{ number_format(round($yab->cpu_freq), 2); }}<small>Mhz</small></span></td>
-                                <td>{{ number_format(round($yab->ram), 2); }}<small>{{ $yab->ram_type }}</small></td>
-                                <td>{{ number_format(round($yab->disk), 2); }}<small>{{ $yab->disk_type }}</small></td>
+                                <td><span title="{{$yab->cpu_model}}">{{ bcdiv($yab->cpu_freq, 1, 2); }}<small>Mhz</small></span></td>
+                                <td>{{ bcdiv($yab->ram, 1, 2); }}<small>{{ $yab->ram_type }}</small></td>
+                                <td>{{ bcdiv($yab->disk, 1, 2); }}<small>{{ $yab->disk_type }}</small></td>
                                 <td><a href="https://browser.geekbench.com/v5/cpu/{{$yab->gb5_id}}"
                                        class="text-decoration-none">{{ $yab->gb5_single }}</a></td>
                                 <td><a href="https://browser.geekbench.com/v5/cpu/{{$yab->gb5_id}}"
