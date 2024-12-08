@@ -19,6 +19,8 @@
                         <th>Disk</th>
                         <th>GB5 S</th>
                         <th>GB5 M</th>
+                        <th>GB6 S</th>
+                        <th>GB6 M</th>
                         <th>IPv6</th>
                         <th>4k</th>
                         <th>64k</th>
@@ -42,6 +44,10 @@
                                        class="text-decoration-none">{{ $yab->gb5_single }}</a></td>
                                 <td><a href="https://browser.geekbench.com/v5/cpu/{{$yab->gb5_id}}"
                                        class="text-decoration-none">{{ $yab->gb5_multi }}</a></td>
+                                <td><a href="https://browser.geekbench.com/v6/cpu/{{$yab->gb6_id}}"
+                                       class="text-decoration-none">{{ $yab->gb6_single }}</a></td>
+                                <td><a href="https://browser.geekbench.com/v6/cpu/{{$yab->gb6_id}}"
+                                       class="text-decoration-none">{{ $yab->gb6_multi }}</a></td>
                                 <td>@if($yab->has_ipv6 === 1)
                                         Yes
                                     @else
