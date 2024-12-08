@@ -35,15 +35,15 @@
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 font-bold">RAM</td>
-                                    <td>{{ number_format(round(($yabs->ram), 2) }} {{$yabs->ram_type}}</td>
+                                    <td>{{ number_format(round($yabs->ram), 2); }} {{$yabs->ram_type}}</td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 font-bold">Swap</td>
-                                    <td>{{ number_format(round(($yabs->swap), 2) }} {{$yabs->swap_type}}</td>
+                                    <td>{{ number_format(round($yabs->swap), 2); }} {{$yabs->swap_type}}</td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 font-bold">Disk</td>
-                                    <td>{{ number_format(round(($yabs->disk), 2) }} {{$yabs->disk_type}}</td>
+                                    <td>{{ number_format(round($yabs->disk), 2); }} {{$yabs->disk_type}}</td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 font-bold">Has IPv6</td>
