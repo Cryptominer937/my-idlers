@@ -107,7 +107,7 @@
                     <a href="{{ route('servers-compare-choose') }}" class="btn btn-primary mb-3 ms-2">Compare
                         servers</a>
                     <div class="table-responsive">
-                        <table class="table table-bordered"  id="labels-table">
+                        <table class="table table-bordered"  id="servers-table">
                             <thead class="table-light">
                             <tr class="bg-gray-100">
                                 <th>Name</th>
@@ -234,11 +234,11 @@
                 });
             })
             window.addEventListener('load', function () {
-                $('#labels-table').DataTable({
+                $('#servers-table').DataTable({
                     "pageLength": 15,
                     "lengthMenu": [5, 10, 15, 25, 30, 50, 75, 100],
                     "columnDefs": [
-                        {"orderable": false, "targets": 1,11}
+                        {"orderable": false, "targets": 1}
                     ],
                     "initComplete": function () {
                         $('.dataTables_length,.dataTables_filter').addClass('mb-2');
