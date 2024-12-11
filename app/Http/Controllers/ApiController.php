@@ -502,6 +502,12 @@ class ApiController extends Controller
         return response($yabs, 200);
     }
 
+    protected function getNote($id)
+    {
+        $note = Note::where('id', $id)->firstOrFail('note')->pluck('note');
+        return response($note, 200)->header('Content-Type', 'text/plain');
+    }
+
     protected function getAllNotes()
     {
         $notes = Note::allNotes()->toJson(JSON_PRETTY_PRINT);
