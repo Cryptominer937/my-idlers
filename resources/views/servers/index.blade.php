@@ -25,7 +25,7 @@
                     <a href="{{ route('servers-compare-choose') }}" class="btn btn-primary mb-3 ms-2">Compare
                         servers</a>
                     <div class="table-responsive">
-                        <table class="table table-bordered"  id="labels-table">
+                        <table class="table table-bordered"  id="servers-table">
                             <thead class="table-light">
                             <tr class="bg-gray-100">
                                 <th>Name</th>
@@ -68,7 +68,7 @@
                                         <td class="text-nowrap">{{ $server->provider->name }}</td>
                                         <td class="text-nowrap">{{ $server->price->price }} {{$server->price->currency}} {{\App\Process::paymentTermIntToString($server->price->term)}}</td>
                                         <td class="text-nowrap">
-                                            {{floor(now()->diffInDays(Carbon\Carbon::parse($server->price->next_due_date), false))}}
+                                            {{number_format(now()->diffInDays(Carbon\Carbon::parse($server->price->next_due_date), false), 0)}}
                                             <small>days</small></td>
                                         <td class="text-nowrap"> {{ $server->owned_since }}</td>
                                         <td class="text-nowrap">
@@ -233,14 +233,12 @@
                     }
                 });
             })
-        </script>
-        <script>
             window.addEventListener('load', function () {
                 $('#labels-table').DataTable({
                     "pageLength": 15,
                     "lengthMenu": [5, 10, 15, 25, 30, 50, 75, 100],
                     "columnDefs": [
-                        {"orderable": false, "targets": 1}
+                        {"orderable": false, "targets": 1,11}
                     ],
                     "initComplete": function () {
                         $('.dataTables_length,.dataTables_filter').addClass('mb-2');
